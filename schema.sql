@@ -1,8 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
-CREATE TABLE animals (
-    name varchar(100)
-);
+
  CREATE TABLE Animals ( id INT PRIMARY KEY NOT NULL, name TEXT NOT NULL ,date_of_birth DATE NOT NULL ,escape_attempts 
 INT NOT NULL, neutered BOOL NOT NULL,weight_kg DECIMAL NOT NULL);
 
@@ -11,7 +9,7 @@ INT NOT NULL, neutered BOOL NOT NULL,weight_kg DECIMAL NOT NULL);
 CREATE TABLE owners (id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, full_name TEXT NOT NULL,age INT NOT NULL);
 CREATE TABLE species (id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, name TEXT NOT NULL);
 ALTER TABLE Animals DROP COLUMN SPECIES;
-ALTER TABLE Animals ADD COLUMN id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY;
+
 ALTER TABLE Animals  ADD COLUMN species_id INT;
 ALTER TABLE AnimalS ADD CONSTRAINT species_id FOREIGN KEY (species_id) REFERENCES SPECIES (id);
 ALTER TABLE Animals  ADD COLUMN owner_id INT;
