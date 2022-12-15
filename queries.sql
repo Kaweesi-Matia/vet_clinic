@@ -56,6 +56,25 @@ SELECT * FROM animals  JOIN owners  ON animals.owner_id = owners.id WHERE escape
 
 
 
+SELECT vets.name, animals.name, date_of_visit FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'William Tatcher' ORDER BY date_of_visit DESC LIMIT 1;
+
+SELECT vets.name,COUNT(animals.name) FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Stephanie Mendez' GROUP BY vets.name;
+
+SELECT vets.name,species.name FROM specializations FULL OUTER JOIN vets ON specializations.vet_id = vets.id FULL OUTER JOIN species ON specializations.species_id = species.id;
+
+SELECT vets.name, animals.name, date_of_visit FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Stephanie Mendez' AND date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT animals.name, COUNT(date_of_visit) FROM visits JOIN animals ON visits.animal_id = animals.id GROUP BY animals.name ORDER BY COUNT(date_of_visit) DESC LIMIT 1;
+
+SELECT vets.name, animals.name, date_of_visit FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Maisy Smith' ORDER BY date_of_visit ASC LIMIT 1;
+
+SELECT vets.name,vets.age, date_of_graduation,animals.name,date_of_birth,escape_attempts,neutered,weight_kg,date_of_visit FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id  ORDER BY date_of_visit DESC LIMIT 1;
+
+SELECT COUNT(*) FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id JOIN specializations ON specializations.vet_id = vets.id JOIN species ON specializations.species_id = species.id WHERE animals.species_id <> specializations.species_id;
+
+SELECT species.name,COUNT(species.name) FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vet_id = vets.id JOIN species ON animals.species_id = species.id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY COUNT(species.name)DESC LIMIT 1;
+
+
 
 
 
