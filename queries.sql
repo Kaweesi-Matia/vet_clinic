@@ -28,11 +28,11 @@ BEGIN;
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 SAVEPOINT SP1;
 
- UPDATE animals SET weight_kg = weight_kg * -1;
- ROLLBACK TO SP1;
+UPDATE animals SET weight_kg = weight_kg * -1;
+ROLLBACK TO SP1;
 
-  UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
-  COMMIT;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+COMMIT;
 
 SELECT COUNT (*) FROM animals;
 SELECT * FROM Animals WHERE escape_attempts < 1;
@@ -43,6 +43,19 @@ SELECT Species, MAX(weight_kg) FROM animals GROUP BY species;
 SELECT Species, MIN(weight_kg) FROM animals GROUP BY species;
 
 SELECT Species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY Species;
+
+SELECT full_name, name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE full_name = 'Melody Pond';
+SELECT species.name, animals.name FROM animals JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
+SELECT FULL_NAME,NAME FROM ANIMALS FULL JOIN OWNERS ON ANIMALS.OWNER_ID = OWNERS.ID;   
+SELECT species.name, COUNT(species.name) FROM animals JOIN species ON animals.species_id = species.id GROUP BY species.name;
+SELECT full_name,species.name, animals.name FROM animals JOIN species ON animals.species_id = species.id JOIN owners ON animals.owner_id = owners.id WHERE species.name = 'Digimon' AND full_name =  'Jennifer Orwell';
+SELECT full_name,COUNT(animals.owner_id) FROM animals JOIN owners ON animals.owner_id = owners.id GROUP BY full_name, animals.owner_id ORDER BY COUNT(animals.owner_id) DESC LIMIT 1;
+
+
+SELECT * FROM animals  JOIN owners  ON animals.owner_id = owners.id WHERE escape_attempts = 0 AND full_name = 'Dean Winchester';
+
+
+
 
 
 
