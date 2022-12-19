@@ -86,7 +86,7 @@ Clone this repository to your desired folder:
 
 - `git clone https://github.com/Kaweesi-Matia/vet_clinic.git` if your're using https or git 
 - `git@github.com:Kaweesi-Matia/vet_clinic.git` if you prefer ssh and hit enter.
-- create a directory in your preferred location (e.g in the Desktop or Document directory)
+- create a directory in your preferred location (for example in the Desktop or Document directory)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
