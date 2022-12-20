@@ -86,13 +86,13 @@ Clone this repository to your desired folder:
 
 - `git clone https://github.com/Kaweesi-Matia/vet_clinic.git` if your're using https or git 
 - `git@github.com:Kaweesi-Matia/vet_clinic.git` if you prefer ssh and hit enter.
-- create a directory in your preferred location (e.g in the Desktop or Document directory)
+- create a directory in your preferred location (for example in the Desktop or Document directory)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="author"></a>
 
 > I was the sole collaborator in this project.
 
@@ -101,6 +101,12 @@ Clone this repository to your desired folder:
 - GitHub: [@Kaweesi-Matia](https://github.com/Kaweesi-Matia)
 - Twitter: [@kaweesimatia](https://twitter.com/kaweesimatia)
 - LinkedIn: [Kaweesi Matia](https://www.linkedin.com/in/kaweesi-matia/)
+
+👤 **Tashobya Israel**
+
+- GitHub: [@githubhandle](https://github.com/tashisrael)
+- Twitter: [@twitterhandle](https://twitter.com/tashisrael)
+- Linkedin: [@linkedinhandle](https://www.linkedin.com/in/tashobya-israel-6a66b0181/l)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
